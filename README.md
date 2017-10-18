@@ -1,4 +1,4 @@
 # Wilt
 
-# About
+### About
 Detecting diseased trees in QuickBird imagery
