@@ -50,7 +50,7 @@ print "----------------------------------------------"
 
 # calculate predictions and compare for manual verification
 predictions = model.predict(X_test)
-fp=open("pred1.txt","w")
+fp=open("pred.txt","w")
 # round off predictions
 for x,y in zip(predictions,Y_test):
 	x=round(x,5)
