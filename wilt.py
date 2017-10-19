@@ -1,9 +1,10 @@
-# Create first network with Keras
+# Classification of the Wilt dataset using neural networks
+import numpy
 from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 from keras.utils import np_utils
-import numpy
+
 numpy.set_printoptions(threshold='nan')
 
 # fix random seed for reproducibility
@@ -11,7 +12,7 @@ seed = 7
 numpy.random.seed(seed)
 
 
-# load pima indians dataset
+# load wilt dataset
 dataset = numpy.loadtxt("training.csv", delimiter=",")
 print(dataset.shape)
 
@@ -47,10 +48,10 @@ print model.metrics_names
 print "----------------------------------------------"
 
 
-# calculate predictions
+# calculate predictions and compare for manual verification
 predictions = model.predict(X_test)
 fp=open("pred1.txt","w")
-# round predictions
+# round off predictions
 for x,y in zip(predictions,Y_test):
 	x=round(x,5)
 	y=round(y,0)
@@ -58,14 +59,7 @@ for x,y in zip(predictions,Y_test):
 fp.close()
 
 
-#index = 0 
-#for x in predictions:
-#	print (index,x)
-#	index += 1
 
-
-
-#numpy.savetxt("pred.txt", rounded, delimiter="\n")
 
         
 
