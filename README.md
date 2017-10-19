@@ -8,7 +8,7 @@ In this implementation the Wilt dataset can been considered to classify multispe
 ### Dataset
 This implementation uses he wilt dataset from the UCI Machine Learning Repository. It consists of 4339 image segments for training and 500 image segments for testing. 
 
-#### Attributes
+##### Attributes
 * class: 'w' (diseased trees), 'n' (all other land cover) 
 * GLCM_Pan: GLCM mean texture (Pan band) 
 * Mean_G: Mean green value
